@@ -28,3 +28,19 @@ cd E-Commerce
 npm install
 
 
+# Live Demo
+
+You can view the live demo of this project at: [Live Demo](https://e-commercebyshivamnalge.netlify.app)
+
+
+## How it works
+
+The data is fetched using the following function:
+
+```javascript
+export const fetchProducts = async () => {
+  const response = await fetch("https://fakestoreapi.com/products");
+  return response.json();
+};
+
+Note: The data fetching might take some time to load. Please be patient while the products are being fetched from the external API.

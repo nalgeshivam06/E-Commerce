@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const Cart = ({ cartItems, updateQuantity, removeItem }) => (
@@ -13,23 +12,21 @@ const Cart = ({ cartItems, updateQuantity, removeItem }) => (
         {cartItems.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between border-b pb-4 mb-4"
+            className="flex flex-col sm:flex-row items-center justify-between border-b pb-4 mb-4"
           >
-            <div className="flex items-center space-x-4 flex-1">
-              <img  src={item.image}
+            <div className="flex items-center sm:space-x-4 w-full sm:w-auto">
+              <img
+                src={item.image}
                 alt={item.title}
-                className="h-16 w-16 object-cover rounded"
+                className="h-16 w-16 object-cover rounded mb-4 sm:mb-0"
               />
               <div className="flex-1">
-                <p className="font-medium break-words max-w-[16rem]">
-                  {item.title}
-                </p>
+                <p className="font-medium break-words max-w-[16rem]">{item.title}</p>
                 <p className="text-sm text-gray-500">{item.category}</p>
               </div>
             </div>
 
-
-            <div className="flex items-center">
+            <div className="flex items-center sm:space-x-3 mt-4 sm:mt-0">
               <button
                 onClick={() => updateQuantity(item.id, item.quantity - 1)}
                 className="bg-gray-200 text-gray-700 px-3 py-1 rounded hover:bg-gray-300"
@@ -45,8 +42,7 @@ const Cart = ({ cartItems, updateQuantity, removeItem }) => (
               </button>
             </div>
 
-
-            <div className="text-right ml-4">
+            <div className="text-right mt-4 sm:mt-0 sm:ml-4 w-full sm:w-auto">
               <p className="font-bold text-lg">${(item.price * item.quantity).toFixed(2)}</p>
               <button
                 onClick={() => removeItem(item.id)}
@@ -57,7 +53,6 @@ const Cart = ({ cartItems, updateQuantity, removeItem }) => (
             </div>
           </div>
         ))}
-
 
         <div className="border-t pt-4 mt-4 text-right">
           <p className="text-xl font-bold">
