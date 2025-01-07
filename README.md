@@ -30,7 +30,12 @@ npm install
 
 # Live Demo
 
-You can view the live demo of this project at: [Live Demo](https://e-commercebyshivamnalge.netlify.app)
+You can view the live demo of this project at: [Live Demo]("https://e-commercebyshivamnalge.netlify.app")
+
+
+<a href="https://e-commercebyshivamnalge.netlify.app" target="_blank">
+  <button>View Live Demo</button>
+</a>
 
 
 ## How it works
